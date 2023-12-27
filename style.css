@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Lexend+Deca:wght@200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,500;1,700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    --darkblue: #232340;
+    --lightorangge: #ffba79;
+    --softviolet: #c897e4;
+    --softblue: #5468e7;
+    --bluedes: #7676b2;
+    --offwhite: #f5f5f5;
+    scroll-behavior: smooth;
+    user-select: none;
+    transition: 0.5s;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color: var(--color2);
+    padding: 1px 20px;
+
+}
+
+.logo {
+    padding-left: 120px;
+}
+
+.menu {
+    display: flex;
+    padding-right: 40px;
+    gap: 25px;
+}
+
+.menu li {
+    padding-left: 30px;
+}
+
+.menu li a {
+    display: inline-block;
+    padding-top: 45px;
+    color: var(--offwhite);
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--offwhite);
+    transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover:after {
+    width: 100%;
+}
+
+.open-menu,
+.close-menu {
+    position: absolute;
+    color: var(--offwhite);
+    cursor: pointer;
+    font-size: 30px;
+    display: none;
+}
+
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+
+#check {
+    display: none;
+}
+
+.page-opening {
+    background: url(bg1.jpg);
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 800;
+    color: var(--offwhite);
+}
+
+.titik {
+    color: var(--softblue);
+}
+
+.border-getaccs {
+    width: 200px;
+    height: 50px;
+    background-color: #7616eb;
+    border-radius: 8px;
+    opacity: 90%;
+}
+
+.border-getaccs:hover {
+    width: 200px;
+    height: 50px;
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    opacity: 90%;
+}
+
+.getaccs {
+    text-decoration: none;
+    color: var(--offwhite);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.center-border {
+    padding-left: 1px;
+}
+
+@media(max-width: 610px) {
+    .logo {
+        padding-left: 10px;
+    }
+
+    .nav-bar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        position: relative;
+
+    }
+
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: var(--darkblue);
+        transition: all 0.2s ease-in-out;
+        padding-right: 0px;
+        gap: 0px;
+    }
+
+
+
+    .menu li {
+        margin-top: 40px;
+    }
+
+
+
+    .menu li a {
+        display: inline-block;
+        text-decoration: none;
+        color: var(--offwhite);
+        text-align: center;
+        transition: 0.15s ease-in-out;
+        position: relative;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .center-border {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu li a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background-color: var(--offwhite);
+        transition: 0.15s ease-in-out;
+    }
+
+    .open-menu,
+    .close-menu {
+        display: block;
+    }
+
+    #check:checked~.menu {
+        right: 0;
+    }
+}
